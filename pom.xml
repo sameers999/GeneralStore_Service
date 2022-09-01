@@ -12,6 +12,7 @@
     <artifactId>GeneralStore</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>GeneralStore</name>
+    <packaging>war</packaging>
     <description>GeneralStore</description>
     <properties>
         <java.version>11</java.version>
