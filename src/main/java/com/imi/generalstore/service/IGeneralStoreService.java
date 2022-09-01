@@ -13,16 +13,5 @@ public interface IGeneralStoreService {
     GeneralStoreData getproductsByID(Long ProductId);
     List<GeneralStoreData> retrieveProducts();
 
-    GeneralStoreData updateById(Long ProductId,GeneralStoreDTO dto);
-
-    GeneralStoreData deleteById(Long ProductId);
-
-    GeneralStoreData getproductByProductName(String productName);
-
-    List<GeneralStoreData> sortGeneralStoresAsc();
-    List<GeneralStoreData> sortGeneralStoresDesc();
-
-    GeneralStoreData updateProductQuantity(long productId, String productQuantity);
-
     GeneralStoreData getproductByIdAPI(Long productId);
 }

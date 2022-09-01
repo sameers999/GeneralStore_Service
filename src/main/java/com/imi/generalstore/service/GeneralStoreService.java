@@ -33,61 +33,6 @@ public class GeneralStoreService implements IGeneralStoreService {
         return list;
     }
 
-    @Override
-    public GeneralStoreData getproductsByID(Long ProductId) {
-        Optional<GeneralStoreData> generalStoreData = repository.findById(ProductId);
-        if (generalStoreData.isEmpty()) {
-            throw new GeneralStoreException("There are no Products with given id");
-        }
-        return generalStoreData.get();
-    }
-
-    @Override
-    public List<GeneralStoreData> retrieveProducts() {
-        return null;
-    }
-
-    @Override
-    public GeneralStoreData updateById(Long productId, GeneralStoreDTO dto) {
-        Optional<GeneralStoreData> generalStoreData = repository.findById(productId);
-        if (generalStoreData.isPresent()) {
-            GeneralStoreData newGeneralStoreData = new GeneralStoreData(productId,dto);
-            repository.save(newGeneralStoreData);
-            return newGeneralStoreData;
-        } else {
-            throw new GeneralStoreException("GeneralStoreData is not Found");
-        }
-    }
-
-    @Override
-    public GeneralStoreData deleteById(Long productId) {
-        Optional<GeneralStoreData> generalStoreData = repository.findById(productId);
-        if (generalStoreData.isEmpty()) {
-            throw new GeneralStoreException("Invalid ProductId.. please input valid Id");
-        }
-        repository.deleteById(productId);
-        return generalStoreData.get();
-    }
-
-    @Override
-    public GeneralStoreData getproductByProductName(String productName) {
-        return null;
-    }
-
-    @Override
-    public List<GeneralStoreData> sortGeneralStoresAsc() {
-        return null;
-    }
-
-    @Override
-    public List<GeneralStoreData> sortGeneralStoresDesc() {
-        return null;
-    }
-
-    @Override
-    public GeneralStoreData updateProductQuantity(long productId, String productQuantity) {
-        return null;
-    }
 
     @Override
     public GeneralStoreData getproductByIdAPI(Long productId) {
@@ -97,4 +42,18 @@ public class GeneralStoreService implements IGeneralStoreService {
         }
         return generalStoreData.get();
     }
+
+	@Override
+	public GeneralStoreData getproductsByID(Long ProductId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<GeneralStoreData> retrieveProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }
