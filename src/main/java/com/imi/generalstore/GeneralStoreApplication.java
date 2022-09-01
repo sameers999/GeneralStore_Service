@@ -17,7 +17,7 @@ public class GeneralStoreApplication {
     }
     public static void main(String[] args) {
         SpringApplication.run(GeneralStoreApplication.class, args);
-        System.out.println("Welcome to Online General Store");
+        System.out.println("Welcome to Online General Store App");
     }
 
 }
